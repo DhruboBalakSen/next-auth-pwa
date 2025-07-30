@@ -1,0 +1,22 @@
+{
+  "name": "ThrottleTribe",
+  "short_name": "ThrottleTribe",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "statusBarStyle": "black-translucent",
+  "description": "A community platform for bikers to plan trips, share stories, and connect.",
+  "icons": [
+    {
+      "src": "/splashscreens/Throttletribe.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/splashscreens/Throttletribe.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
