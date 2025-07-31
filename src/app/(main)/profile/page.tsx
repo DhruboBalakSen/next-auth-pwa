@@ -6,14 +6,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 
 export default function ProfilePage() {
   const { data: session, status, update } = useSession();
-  const [name, setName] = useState(session?.user?.name || "");
+  console.log(session);
+  const [name, setName] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (session?.user?.name) {
+      setName(session.user.name);
+    }
+  }, [session?.user?.name]);
 
   if (status === "loading") return null;
 
@@ -60,7 +67,7 @@ export default function ProfilePage() {
                   src={
                     image
                       ? URL.createObjectURL(image)
-                      : session?.user?.image || ""
+                      : session?.user?.image || "/default.png"
                   }
                   alt="Profile"
                 />
