@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "ThrottleTribe",
   },
 };
@@ -35,16 +35,16 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         {/* iOS Splash and Icon Setup */}
-        <link rel="apple-touch-icon" href="/splashscreens/Throttletribe.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="apple-touch-startup-image"
-          href="/splashscreens/Throttletribe.png"
+          href="/icon.png"
           media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
         />
         {/* These are now also set via metadata.appleWebApp, but redundant is okay for wide compatibility */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="antialiased">
         <SessionProvider>

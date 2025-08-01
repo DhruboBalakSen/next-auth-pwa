@@ -54,7 +54,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-[calc(80vh)] flex items-center justify-center px-4 py-10">
+    <div className="min-h-dvh flex items-center justify-center px-4 py-10">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Edit Profile</CardTitle>

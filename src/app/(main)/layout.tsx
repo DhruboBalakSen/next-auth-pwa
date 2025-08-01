@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import GlassmorphicHeader from "@/components/Header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Suspense } from "react";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "ThrottleTribe",
   },
 };
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <Header />
+      <GlassmorphicHeader />
       <Toaster position="top-center" />
       <Suspense>{children}</Suspense>
     </div>

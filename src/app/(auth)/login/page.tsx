@@ -47,8 +47,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-[calc(80vh)] flex items-center justify-center bg-gray-100 px-4">
-      <Card className="w-full max-w-md shadow-lg">
+    <div className="min-h-dvh flex items-center justify-center px-4 bg-gray-50 w-full">
+      <Card className="w-full shadow-lg max-w-md">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">
             Login
@@ -106,7 +106,7 @@ export default function LoginPage() {
           <Button
             variant="outline"
             className="w-full"
-            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+            onClick={() => signIn("google", { redirectTo })}
           >
             <GoogleSVG />
             Sign in with Google

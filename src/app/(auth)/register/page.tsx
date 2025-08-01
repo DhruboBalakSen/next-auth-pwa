@@ -40,9 +40,9 @@ export default function RegisterPage() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="min-h-[calc(80vh)] flex items-center justify-center bg-gray-100 px-4"
+      className="min-h-dvh flex items-center justify-center px-4 w-full"
     >
-      <Card className="w-full max-w-md shadow-lg px-auto">
+      <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">
             Register

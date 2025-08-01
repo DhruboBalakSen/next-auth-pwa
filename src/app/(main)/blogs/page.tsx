@@ -1,6 +1,6 @@
 const Page = () => {
   return (
-    <div className='flex items-center justify-center min-h-[calc(80vh)]'>Blogs</div>
+    <div className='flex items-center justify-center min-h-dvh'>Blogs</div>
   )
 }
 
